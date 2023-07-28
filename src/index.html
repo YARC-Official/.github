@@ -12,15 +12,22 @@ And you can edit it easily, just gotta re-"render" it.
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,700;1,700&display=swap');
 
-		body {
-			background-color: black;
-		}
-
 		#background {
-			filter: blur(10px);
+			background: url(background.png);
+			background-size: cover;
+
+			width: 100%;
 			position: fixed;
 			inset: 0;
+
 			z-index: -100;
+		}
+
+		#background::after {
+			content: "";
+			position: fixed;
+			inset: 0;
+			backdrop-filter: blur(10px);
 		}
 
 		#container {
@@ -40,7 +47,7 @@ And you can edit it easily, just gotta re-"render" it.
 </head>
 
 <body>
-	<img src="background.png" id="background" />
+	<div id="background"></div>
 
 	<div id="container">
 		Yet Another Rhythm Company determined to revolutionize<br />
