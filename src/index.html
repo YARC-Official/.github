@@ -1,6 +1,6 @@
-<!-- 
-	
-Why is this HTML? Because it's just the easier for me. 
+<!--
+
+Why is this HTML? Because it's just the easier for me.
 And you can edit it easily, just gotta re-"render" it.
 
 + 32px border radius
@@ -13,6 +13,7 @@ And you can edit it easily, just gotta re-"render" it.
 <head>
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,700;1,700&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,600;0,700;1,900&display=swap');
 
 		#background {
 			background: url(background.png);
@@ -45,6 +46,20 @@ And you can edit it easily, just gotta re-"render" it.
 
 			filter: drop-shadow(0 0 0.75rem black);
 		}
+
+		#logos {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 64px;
+		}
+
+		#opensource {
+			font-family: 'Red Hat Display', sans-serif;
+			font-weight: 900;
+			font-style: italic;
+			font-size: 35px;
+		}
 	</style>
 </head>
 
@@ -56,7 +71,10 @@ And you can edit it easily, just gotta re-"render" it.
 		plastic guitar games for free, and open to everyone.<br />
 		<br />
 		<p style="font-size: 0.5em;">The Creators Of</p>
-		<img src="yarg.png" width="200em" />
+		<div id="logos">
+			<img src="yarg.png" width="200em" />
+			<div id="opensource">OPENSOURCE</div>
+		</div>
 	</div>
 </body>
 
